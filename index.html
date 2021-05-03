@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Tracker</title>
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+
+</head>
+<body>
+    
+        <header class="header">
+            <div class="header__title">
+                <h1 class="header__title__text">Weight Tracker</h1>
+            </div>
+            <div class="header__picker">
+                <label for="date">Date</label>
+                <input type="text" id="date-picker" class="header__picker__date primary-input disableFuturedate"><i style="padding: 3px;" class="far fa-calendar-alt"></i>
+                <label for="number">Weight</label>
+                <input type="number" step="0.1" class="header__picker__weight primary-input" id="weight-picker"><span class="kg">kg</span>
+                <button type="submit" id="weight-add" class="add-btn sendButton">ADD</button>
+            </div>
+        </header>
+        <h1>History</h1>
+        <section class="history">
+            <div class="history__title">
+            </div>
+            <div class="history__new">   
+            </div>
+        </section>
+
+
+        <section class="weights">
+            <div class="container">
+                <div class="container__item1">
+                    <p class="bigger" id="curWeight"></p><p class="smaller">Current Weight</p>
+                </div>
+                <div class="container__item2">
+                    <p class="bigger" id="startWeight"></p><p class="smaller">Weight at the <br>start of the period</p>
+                </div>
+                <div class="container__item3">
+                    <p class="bigger" id="difWeight"></p><p class="smaller">Progress</p>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+    </html>
