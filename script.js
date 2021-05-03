@@ -2,9 +2,9 @@ window.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded');
 });
 
-var dateElement = document.getElementById('date-picker');
-var weightElement = document.getElementById('weight-picker');
-var parentDivEl = document.querySelector('.history__new');
+var dateElement = document.getElementById('date-button');
+var weightElement = document.getElementById('weight-button');
+var parentElement = document.querySelector('.history__new');
 
 function maxDate() {
     var today = new Date();
@@ -99,7 +99,7 @@ $(document).ready(function () {
 $(document).ready(function(){
     $('.sendButton').attr('disabled',true);
 
-    $('#date-picker') && $('#weight-picker').keyup(function(){
+    $('#date-button') && $('#weight-button').keyup(function(){
         if($(this).val().length !=0){
             $('.sendButton').attr('disabled', false);
         }

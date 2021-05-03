@@ -2,9 +2,9 @@ window.addEventListener('DOMContentLoaded', function () {
     console.log('DOM fully loaded');
 });
 
-let dateElement = document.getElementById('date-picker') as HTMLInputElement;;
-let weightElement = document.getElementById('weight-picker') as HTMLInputElement;;
-const parentDivEl = document.querySelector('.history__new') as HTMLInputElement;;
+let dateElement = document.getElementById('date-button') as HTMLInputElement;;
+let weightElement = document.getElementById('weight-button') as HTMLInputElement;;
+const parentElement = document.querySelector('.history__new') as HTMLInputElement;;
 
 function maxDate(){
     let today :any = new Date();
@@ -32,7 +32,7 @@ addElement.addEventListener('click',function(e){
     
     addHistory();
 
-    let count = getCount(parentDivEl, false);
+    let count = getCount(parentElement, false);
     
     removeLastEl(count);
 
@@ -60,7 +60,7 @@ function addHistory() {
 
     document.getElementById("startWeight").innerHTML = (weightValue + ' kg'); // nem sikerült csak az első klikket vizsgálni
 
-    document.getElementById("difWeight").innerHTML = (weightValue - 60  + ' kg'); // jelenlegi súly - kezdősúly, avagy fordítva
+    document.getElementById("difWeight").innerHTML = (weightValue  + ' kg'); // jelenlegi súly - kezdősúly, avagy fordítva
 
 }
 
@@ -107,7 +107,7 @@ $(document).ready(function () {
 $(document).ready(function(){
     $('.sendButton').attr('disabled',true);
 
-    $('#date-picker') && $('#weight-picker').keyup(function(){
+    $('#date-button') && $('#weight-button').keyup(function(){
         if($(this).val().length !=0){
             $('.sendButton').attr('disabled', false);
         }
